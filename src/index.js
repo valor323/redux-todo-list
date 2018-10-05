@@ -10,10 +10,10 @@ import {
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import rootreducer from './reducers';
-import reduxPromise from 'redux-promise';
+import rPromise from './middleware/r_promise';
 
 
-const store = createStore(rootreducer, {}, applyMiddleware(reduxPromise));
+const store = createStore( rootreducer, {} , applyMiddleware(rPromise) );
 
 ReactDOM.render(
     <Provider store = {store}>
